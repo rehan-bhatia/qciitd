@@ -4,7 +4,8 @@ import "tachyons"
 
 
 import Nav from "../components/Nav.js"
-import Standings from "../components/standings.js"
+import LeagueStandings from "../components/leaguestandings.js"
+import IndivStandings from "../components/indivstandings.js"
 import "../components/style.css"
 
 const LeaguePage = ({data}) => (
@@ -17,8 +18,10 @@ const LeaguePage = ({data}) => (
 			</div>					
 			)
 		)}
-  		<Standings title="League"/>
-  		<Standings title="Individual"/>
+		<div class = "w-100 flex">
+  			<LeagueStandings/>
+  			<IndivStandings/>
+  		</div>
 		
 		
   	</div>
