@@ -39,7 +39,7 @@ const Leaderboard = ({data}) => {
       )
     } else if (isMobile) {
       return(
-        <div class="dib">
+        <div class="flex">
           <img src = {data.url} class = "dib pa2 br-100 ba b--black-10" style={{height:"70px", width:"70px"}} />
           <div>
             <p class="f3 pt2 mb0">{data.name}</p>
