@@ -46,7 +46,7 @@ const Leaderboard = ({data}) => {
               <p class="f3 pt2 mb0">{data.name}</p>
               <p class="f4 pa2">{data.points} points</p>
             </div>
-            <div class="ml4">
+            <div class="ml6">
               {x}
             </div>
           </div>
