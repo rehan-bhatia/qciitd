@@ -25,13 +25,13 @@ const Leaderboard = ({data}) => {
     return(
       <article class="dt w-100 bb b--black-05 pb0 mt2" href="#0">
           <div class="dtc w2 w3-ns v-mid">
-            <img src={data.url} class="ba b--black-10 db br-100 w3 h3"/>
+            <img src={data.url} class="ba b--black-10 db br-100" style={{height:"70px", width: "70px"}}/>
           </div>
           <div class="ph3 mb0">
             <h2 class="f4 pt2 mb0"> {data.name} </h2>
             <p class="f5 pt1"> Points: {data.points}</p>
           </div>
-          <div class={`${(isBrowser) ? "dtc w2 w3-ns v-mid" : "ml3"} `}>
+          <div class={`${(isBrowser) ? "dtc w2 w3-ns v-mid" : "dib ml2"} `}>
             {x}
           </div>
       </article>
