@@ -5,20 +5,20 @@ const Leaderboard = ({data}) => {
   let title = "title"
   console.log(data)
   let random_data = data
-  const images = ["https://i.ibb.co/J7BtmhZ/gold-Medal.jpg", "https://i.ibb.co/Gp2jH7T/silver-Medal.jpg", "https://i.ibb.co/X5sQDD7/bronze-Medal.jpg","https://i.ibb.co/zsGRrtt/Screenshot-2020-11-13-at-6-24-16-PM.png"]
+  const images = ["https://i.ibb.co/F7m3B7q/gold-Medal.png", "https://i.ibb.co/TtsR8L3/silver-Medal.png", "https://i.ibb.co/SdczRTL/bronze-Medal.png","https://i.ibb.co/zsGRrtt/Screenshot-2020-11-13-at-6-24-16-PM.png"]
   let length = random_data.length
 
   const Ranking = ({data}) => {
     let rank = random_data.indexOf(data)
     let x;
     if (rank < length/6) {
-      x = 0
+      x = <img src={images[0]} class="db br-100 w2 w3-ns h2 h3-ns" style={{width:"70px", height:"70px"}}/>
     } else if (rank < length/3) {
-      x = 1
+      x = <img src={images[1]} class="db br-100 w2 w3-ns h2 h3-ns" style={{width:"70px", height:"70px"}}/>
     } else if (rank < length/2) {
-      x = 2
+      x = <img src={images[2]} class="db br-100 w2 w3-ns h2 h3-ns" style={{width:"70px", height:"70px"}}/>
     } else {
-      x = 3
+      x = <div></div>
     }
 
     return(
@@ -31,7 +31,7 @@ const Leaderboard = ({data}) => {
             <p class="f5 pt1"> Points: {data.points}</p>
           </div>
           <div class="dtc w2 w3-ns v-mid">
-            <img src={images[x]} class="db br-100 w2 w3-ns h2 h3-ns" style={{width:"50px", height:"50px"}}/>
+            {x}
           </div>
       </article>
     )
