@@ -24,7 +24,7 @@ const Leaderboard = ({data}) => {
 
     return(
       <article class="dt w-100 bb b--black-05 pb0 mt2" href="#0">
-          <div class="dtc w2 w3-ns v-mid">
+          <div class={`${(isBrowser)?"dtc w2 w3-ns v-mid":"pa2"}`}>
             <img src={data.url} class="ba b--black-10 db br-100" style={{height:"70px", width: "70px"}}/>
           </div>
           <div class="ph3 mb0">
