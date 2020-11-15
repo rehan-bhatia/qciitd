@@ -22,20 +22,35 @@ const Leaderboard = ({data}) => {
       x = <div></div>
     }
 
-    return(
-      <article class="dt w-100 bb b--black-05 pb0 mt2" href="#0">
-          <div class={`${(isBrowser)?"dtc w2 w3-ns v-mid":"pa2"}`}>
-            <img src={data.url} class="ba b--black-10 db br-100" style={{height:"70px", width: "70px"}}/>
+    if (isBrowser) {
+      return(
+        <article class="dt w-100 bb b--black-05 pb0 mt2" href="#0">
+            <div class={`${(isBrowser)?"dtc w2 w3-ns v-mid":"dib pa2"}`}>
+              <img src={data.url} class="ba b--black-10 db br-100" style={{height:"70px", width: "70px"}}/>
+            </div>
+            <div class="ph3 mb0">
+              <h2 class="f4 pt2 mb0"> {data.name} </h2>
+              <p class="f5 pt1"> Points: {data.points}</p>
+            </div>
+            <div class={`${(isBrowser) ? "dtc w2 w3-ns v-mid" : "dib ml2"} `}>
+              {x}
+            </div>
+        </article>
+      )
+    } else if (isMobile) {
+      return(
+        <div class="dib">
+          <img src = {data.url} class = "dib pa2 br-100 ba b--black-10" style={{height:"70px", width:"70px"}} />
+          <div>
+            <p class="f3 pt2 mb0">{data.name}</p>
+            <p class="f4 pa2">{data.points} points</p>
           </div>
-          <div class="ph3 mb0">
-            <h2 class="f4 pt2 mb0"> {data.name} </h2>
-            <p class="f5 pt1"> Points: {data.points}</p>
-          </div>
-          <div class={`${(isBrowser) ? "dtc w2 w3-ns v-mid" : "dib ml2"} `}>
+          <div class="dib ml2">
             {x}
           </div>
-      </article>
-    )
+        </div>
+      )
+    }
   }
 
   let output = random_data.map((item) => <Ranking data = {item}/>)
