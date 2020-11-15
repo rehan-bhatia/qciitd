@@ -1,5 +1,6 @@
 import React from "react"
 import "tachyons"
+import { isBrowser, isMobile } from "react-device-detect";
 
 const Leaderboard = ({data}) => {
   let title = "title"
@@ -24,13 +25,13 @@ const Leaderboard = ({data}) => {
     return(
       <article class="dt w-100 bb b--black-05 pb0 mt2" href="#0">
           <div class="dtc w2 w3-ns v-mid">
-            <img src={data.url} class="ba b--black-10 db br-100 w2 w3-ns h2 h3-ns"/>
+            <img src={data.url} class="ba b--black-10 db br-100 w3 h3"/>
           </div>
           <div class="ph3 mb0">
             <h2 class="f4 pt2 mb0"> {data.name} </h2>
             <p class="f5 pt1"> Points: {data.points}</p>
           </div>
-          <div class="dtc w2 w3-ns v-mid">
+          <div class={`${(isBrowser) ? "dtc w2 w3-ns v-mid" : "ml3"} `}>
             {x}
           </div>
       </article>

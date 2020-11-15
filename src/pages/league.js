@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql } from 'gatsby'
 import "tachyons"
-
-
+import { isBrowser, isMobile } from "react-device-detect";
 
 import Nav from "../components/Nav.js"
 import LeagueStandings from "../components/leaguestandings.js"
@@ -21,7 +20,7 @@ const LeaguePage = ({data}) => (
 		)}
 		<div class = "w-100 flex">
 			<img src = "https://i.ibb.co/L6Lq6dW/winner1.png" style={{width: "201.9px", height: "162.3px"}}/>
-			<h1 class = "pa2 ml3 avenir navy f-subheadline">Leaderboard</h1>
+			<h1 class = {`pa2 ml3 avenir navy ${(isBrowser) ? "f-subheadline" : "f1"}`}>Leaderboard</h1>
 		</div>
 		<div class = "w-100 flex">
   			<LeagueStandings/>

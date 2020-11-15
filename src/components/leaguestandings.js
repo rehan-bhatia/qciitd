@@ -1,5 +1,5 @@
 import React from "react"
-
+import { isBrowser, isMobile } from "react-device-detect";
 import Leaderboard from "../components/leaderboard.js"
 
 let random_data = [
@@ -37,7 +37,7 @@ let random_data = [
 ]
 
 const LeagueStandings = ({title}) => (
-	<div class={`ma3 mr2 br bw1 pr3 b--navy`} style={{width:"600px"}}>
+	<div class={`ma3 mr2 ${(isBrowser) ? "br bw1 pr3 b--navy" : "bb bw1 pb3 b--navy"}`} style={{width:"600px"}}>
 		<h2 class="mt4 mb2 pa2 tc">League Standings</h2>
   		<div class="flex w-100">
   		  <div class="grow">
