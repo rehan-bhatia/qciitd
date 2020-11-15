@@ -42,11 +42,11 @@ const Leaderboard = ({data}) => {
         <div>
           <div style={{display: "flex", flexWrap: "wrap", justifyContent: "flex-start"}}>
             <img src = {data.url} class = "pa2 br-100 ba b--black-10" style={{height:"70px", width:"70px"}} />
-            <div class = "ml3 w-20">
+            <div class = "ml3 w-50">
               <p class="f4 pt2 ph2 mb0">{data.name}</p>
               <p class="f5 pa2">{data.points} points</p>
             </div>
-            <div class="ml6">
+            <div class="ml5">
               {x}
             </div>
           </div>
