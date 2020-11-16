@@ -4,7 +4,7 @@ import Leaderboard from "../components/leaderboard.js"
 
 
 
-const IndivStandings = () => {
+const IndivStandings = ({data}) => {
 	let random_data = [
 	    {
 	      name: "Omi Baba",
@@ -45,18 +45,18 @@ const IndivStandings = () => {
   		<div class="flex w-100">
   		  <div class="grow">
 		  	<img src={random_data[1].url} class="grow br-100 ba b--gray mh2 mb2" style={{borderWidth: "5px", height:(isBrowser)?"150px":"100px", width:(isBrowser)?"150px":"100px", marginTop:"25px"}} alt="avatar"/>
-		  	<p class="f5 tc mt0 pa0">{random_data[1].name}</p>
+		  	<p class="f5 tc mt0 pa0">{data[1].name}</p>
 		  </div>
 		  <div class="grow">
 		  	<img src={random_data[0].url} class="grow br-100 ba b--gold mh2 mb2" style={{borderWidth: "5px", height:(isBrowser)?"180px":"120px", width:(isBrowser)?"180px":"120px"}} alt="avatar"/>
-		  	<p class="f5 tc mt0 pa0">{random_data[0].name}</p>
+		  	<p class="f5 tc mt0 pa0">{data[0].name}</p>
 		  </div>
 		  <div class="grow">
 		  	<img src={random_data[2].url} class="br-100 ba grow mh2 mb2" style={{borderWidth: "5px", borderColor: "#B1560F", height:(isBrowser)?"130px":"80px", width:(isBrowser)?"130px":"80px", marginTop:"35px"}} alt="avatar"/>
-		  	<p class="f5 tc mt0 pa0">{random_data[2].name}</p>
+		  	<p class="f5 tc mt0 pa0">{data[2].name}</p>
 		  </div>
 		</div>
-		<Leaderboard data={random_data}/>
+		<Leaderboard data={data}/>
 	</div>
 	)
 }

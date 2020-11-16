@@ -12,19 +12,40 @@ const LeaguePage = ({data}) => (
 	<div>
   		<Nav/>
 		
+		{/* {data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)}
+		
+		{data.allGoogleSpreadsheetIndividual.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)}
+		
 		{data.allGoogleSpreadsheetTeam.edges.map((item)=>(
 			<div>
-				{item.node.captain}
+				{item.node.position} - {item.node.team} - {item.node.captain} , {item.node.points}
 			</div>					
 			)
 		)}
+		<br></br>
+		{data.allGoogleSpreadsheetIndividual.edges.filter(item => item.node.position<7).map((item)=>(
+			
+			<div>
+				{item.node.position} - {item.node.name} - {item.node.total}
+			</div>					
+			)
+		)} */}
+		
+		{/* {console.log(data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1))}
+
+		{data.allGoogleSpreadsheetTeam.edges.map((item)=>(
+			<div>
+				{item.node.captain} - {item.node.position}
+			</div>					
+			)
+		)} */}
 		<div class = "w-100 flex">
 			<img src = "https://i.ibb.co/L6Lq6dW/winner1.png" style={{width: "201.9px", height: "162.3px"}}/>
 			<h1 class = {`pa2 ml3 avenir navy ${(isBrowser) ? "f-subheadline" : "f1"}`}>Leaderboard</h1>
 		</div>
 		<div class = "w-100 flex">
-  			<LeagueStandings/>
-  			<IndivStandings/>
+  			<LeagueStandings data={data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)} />
+  			<IndivStandings data={data.allGoogleSpreadsheetIndividual.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1).filter(item => item.node.position<=6)}/>
   		</div>
 		
 		
@@ -33,18 +54,29 @@ const LeaguePage = ({data}) => (
 
 export const query = graphql`
 query HomePageQuery {
-    allGoogleSpreadsheetTeam {
-		edges {
-		  node {
-			id
-			position
-			team
-			points
-			captain
-		  }
+	allGoogleSpreadsheetTeam {
+	  edges {
+		node {
+		  id
+		  points
+		  captain
+		  position
+		  name
 		}
 	  }
+	}
+	allGoogleSpreadsheetIndividual {
+	  edges {
+		node {
+		  name
+		  team
+		  position
+		  points
+		}
+	  }
+	}
   }
+  
 `
 
 export default LeaguePage

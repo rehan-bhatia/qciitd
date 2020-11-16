@@ -29,8 +29,8 @@ const Leaderboard = ({data}) => {
               <img src={data.url} class="ba b--black-10 db br-100" style={{height:"70px", width: "70px"}}/>
             </div>
             <div class="ph3 mb0">
-              <h2 class="f4 pt2 mb0"> {data.name} </h2>
-              <p class="f5 pt1"> Points: {data.points}</p>
+              <h2 class="f4 pt2 mb0"> {data.node.name} </h2>
+              <p class="f5 pt1"> Points: {data.node.points}</p>
             </div>
             <div class={`${(isBrowser) ? "dtc w2 w3-ns v-mid" : "dib ml2"} `}>
               {x}
@@ -43,8 +43,8 @@ const Leaderboard = ({data}) => {
           <div style={{display: "flex", flexWrap: "wrap", justifyContent: "flex-start"}}>
             <img src = {data.url} class = "pa2 br-100 ba b--black-10" style={{height:"70px", width:"70px"}} />
             <div class = "ml3 w-50">
-              <p class="f4 pt2 ph2 mb0">{data.name}</p>
-              <p class="f5 pa2">{data.points} points</p>
+              <p class="f4 pt2 ph2 mb0">{data.node.name}</p>
+              <p class="f5 pa2">{data.node.points} points</p>
             </div>
             <div class="ml3">
               {x}
