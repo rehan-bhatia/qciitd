@@ -40,13 +40,13 @@ const Leaderboard = ({data}) => {
     } else if (isMobile) {
       return(
         <div>
-          <div style={{display: "flex", flexWrap: "wrap", justifyContent: "flex-start"}}>
-            <img src = {data.url} class = "pa2 br-100 ba b--black-10" style={{height:"70px", width:"70px"}} />
-            <div class = "ml3 w-50">
+          <div style={{display: "flex", flexWrap: "wrap", justifyContent: "flex-start", marginLeft: "0px", width:"100vw"}}>
+            <img src = {data.url} class = "pr2 pl0 ml0 br-100 ba b--black-10" style={{height:"70px", width:"70px"}} />
+            <div class = "ml3 mr0 w-40">
               <p class="f4 pt2 ph2 mb0">{data.node.name}</p>
               <p class="f5 pa2">{data.node.points} points</p>
             </div>
-            <div class="ml3">
+            <div class="ml0 pl0">
               {x}
             </div>
           </div>
