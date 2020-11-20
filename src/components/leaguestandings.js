@@ -39,17 +39,17 @@ let random_data = [
 const LeagueStandings = ({data}) => (
 	<div class={`ma3 mr2 ${(isBrowser) ? "br bw1 pr3 b--navy" : "bb bw1 pb3 b--navy"}`} style={{width:"600px"}}>
 		
-		<h2 class="mt4 mb2 pa2 tc">League Standings</h2>
-  		<div class="flex w-100">
-  		  <div class="grow">
+		<h2 class={`mt4 mb2 pa2 ${(isBrowser) ? "tc" : "tl ml5 mb4"}`}>League Standings</h2>
+  		<div class={`${(isBrowser) ? "flex" : "dib"} w-100`}>
+  		  <div class="grow mh2 dib" style={{width:(isBrowser)?"150px":"100px"}}>
 		  	<img src={random_data[1].url} class="grow br-100 ba b--gray mh2 mb2" style={{borderWidth: "5px", height:(isBrowser)?"150px":"100px", width:(isBrowser)?"150px":"100px", marginTop:"25px"}} alt="avatar"/>
 		  	<p class="f5 tc mt0 pa0">{data[1].node.name}</p>
 		  </div>
-		  <div class="grow">
+		  <div class="grow mh2 dib" style={{width:(isBrowser)?"180px":"120px"}}>
 		  	<img src={random_data[0].url} class="grow br-100 ba b--gold mh2 mb2" style={{borderWidth: "5px", height:(isBrowser)?"180px":"120px", width:(isBrowser)?"180px":"120px"}} alt="avatar"/>
 		  	<p class="f5 tc mt0 pa0">{data[0].node.name}</p>
 		  </div>
-		  <div class="grow">
+		  <div class="grow mh2 dib" style={{width:(isBrowser)?"130px":"80px"}}>
 		  	<img src={random_data[2].url} class="br-100 ba grow mh2 mb2" style={{borderWidth: "5px", borderColor: "#B1560F", height:(isBrowser)?"130px":"80px", width:(isBrowser)?"130px":"80px", marginTop:"35px"}} alt="avatar"/>
 		  	<p class="f5 tc mt0 pa0">{data[2].node.name}</p>
 		  </div>

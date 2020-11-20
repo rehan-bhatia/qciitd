@@ -29,7 +29,7 @@ class MobileBoard extends React.Component {
 
 		return(
 			<div>
-				<div class = "w-100 pa2">
+				<div class = "w-100 pa2 tc">
 					<p onClick = {()=>this.onButtonClick("indiv")} class="f6 grow no-underline br-pill ph3 pv2 mb2 mr3 dib white bg-dark-green">Individual Standings</p>
 					<p onClick = {()=>this.onButtonClick("league")} class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-dark-blue">League Standings</p>
 				</div>
