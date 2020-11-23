@@ -10,8 +10,8 @@ const Nav = () => {
 	}
 	return(
 		<nav style={{fontFamily: "garamond"}} class="navbar db dt-l w-100 border-box pa3 ph5-l pv0">
-		  <p class="dib dtc-l v-mid w-100 w-20-l tc tl-l"><img className="navbar-logo" src={'../../logo.jpg'}/></p>
-		  <div class="db dtc-l pa2v-mid w-100 w-80-l tc tr-l mb0-l mt2 mb2 pt2">
+		  <p class="dib dtc-l v-mid w-100 w-10-l tc tl-l mb0-l mb2"><img className="navbar-logo" src={'../../logo.jpg'}/></p>
+		  <div class="db dtc-l pa2v-mid w-100 w-90-l tc tr-l mb0-l mt2 mb2 pt2">
 		  	<p onClick={()=>onClick("/")} class="nav pointer mt link dib mr3 mt3 mr4-l hover-green grow"><h4>Home</h4></p>
 		  	<p onClick={()=>onClick("/team")} class=" pointer nav mt link dib mr3 mr4-l hover-green grow"><h4>Team</h4></p>
 		  	<p onClick={()=>onClick("/calendar")} class="nav pointer mt link dib mr3 mr4-l hover-green grow"><h4>Calendar</h4></p>
