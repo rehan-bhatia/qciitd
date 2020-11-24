@@ -6,10 +6,10 @@ const FlipCard = ({name,data}) => {
 		<div className="flip-card">
 				<div className="flip-card-inner">
 					<div className="flip-card-front">
-						<h1>{name}</h1>
+						<p>{name}</p>
 					</div>
 					<div className="flip-card-back">
-						<h3>{data} </h3>
+						<p>{data} </p>
 					</div>
 				</div>
 		</div>
