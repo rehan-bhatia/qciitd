@@ -2,32 +2,11 @@ import React from "react"
 import "tachyons"
 
 import Nav from "../components/Nav.js";
+import "../components/style.css"
 
 let output;
-
-const prevButton = () => {
-	return(		
-		<p class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4">
-			<svg class="w1 hover" data-icon="chevronLeft" viewBox="0 0 32 32">
-				<title>chevronLeft icon</title>
-				<path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
-			</svg>
-			<span class="pl1"></span>
-		</p>
-	)
-}
-
-const nextButton = () => {
-	return(
-		  <p class="f5 no-underline pointer black bg-animate pointer hover-bg-green br-100 hover-white inline-flex items-center pa3 ba border-box">
-		    <span class="pr1"></span>
-		    <svg class="w1" data-icon="chevronRight" viewBox="0 0 32 32">
-		      <title>chevronRight icon</title>
-		      <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
-		    </svg>
-		  </p>
-	)
-}
+let data = ["https://s3-us-west-1.amazonaws.com/tachyonsio/img/watchmen.jpg", "https://i.pinimg.com/originals/0a/da/86/0ada86ce3ed52a6f8848aafc3fc1c40b.jpg", "https://images-na.ssl-images-amazon.com/images/I/71tUSFn3W0L._AC_SL1000_.jpg"]
+let poster_group;
 
 class Calendar extends React.Component {
 	constructor() {
@@ -44,7 +23,7 @@ class Calendar extends React.Component {
 	render() {
 		if (this.state.route == "current") {
 			output = (
-				<div class="flex items-center justify-center pa4">
+				<div class="flex items-center justify-center ph4 pt0">
 					<p onClick = {() => this.onRouteChange("old")} class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4">
 						<svg class="w1 hover" data-icon="chevronLeft" viewBox="0 0 32 32">
 							<title>chevronLeft icon</title>
@@ -62,9 +41,21 @@ class Calendar extends React.Component {
 					</p>
 				</div>
 			)
+			poster_group = (
+				<div class="slider w-90 pt3">
+					<img src={data[0]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[0]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[0]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[0]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[0]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[0]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+				</div>
+			)
+				
+
 		} else if (this.state.route == "new") {
 			output = (
-				<div class="flex items-center justify-center pa4">
+				<div class="flex items-center justify-center ph4 pt0">
 					<p onClick = {() => this.onRouteChange("current")} class="f5 no-underline pointer br-100 black bg-animate hover-bg-green hover-white inline-flex items-center pa3 ba border-box mr4">
 						<svg class="w1 hover" data-icon="chevronLeft" viewBox="0 0 32 32">
 							<title>chevronLeft icon</title>
@@ -75,9 +66,20 @@ class Calendar extends React.Component {
 					<p class="pa2 mr4 f2 avenir green">Upcoming Events</p>
 				</div>
 			)
+			poster_group = (
+				<div class="slider w-90 pt3">
+					<img src={data[1]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[1]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[1]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[1]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[1]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[1]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+				</div>
+			)
+
 		} else if (this.state.route == "old") {
 			output = (
-				<div class="flex items-center justify-center pa4">
+				<div class="flex items-center justify-center ph4 pt0">
 					<p class="pa2 mr4 f2 avenir green">Past Events</p>
 					<p onClick = {() => this.onRouteChange("current")} class="f5 no-underline pointer black bg-animate pointer hover-bg-green br-100 hover-white inline-flex items-center pa3 ba border-box">
 					    <span class="pr1"></span>
@@ -88,14 +90,26 @@ class Calendar extends React.Component {
 					</p>
 				</div>
 			)
+
+			poster_group = (
+				<div class="slider w-90 pt3">
+					<img src={data[2]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[2]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[2]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[2]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[2]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+					<img src={data[2]} class="grow mh2" style={{height: "600px", width:"400px"}}/>
+				</div>
+			)
 		}
 
 		return(
 			<div>
 				<Nav/>
-				<div class="flex items-center justify-center pa4 pt0 mt0">
+				<div class="flex items-center justify-center ph4 pv0 mt0">
 					{output}
 				</div>
+				{poster_group}
 			</div>
 		)
 	}

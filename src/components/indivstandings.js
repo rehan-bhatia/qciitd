@@ -40,7 +40,7 @@ const IndivStandings = ({data}) => {
 ]
 
 	return(
-	<div class={`ma3 mr4`} style={{width:"600px"}}>
+	<div class={`ma3 mr4 ${(isBrowser) ? "bl bw1 pl3 b--navy" : ""}`} style={{width:"600px"}}>
 		<h2 class={`mt4 mb2 pa2 ${(isBrowser) ? "tc" : "tl ml5 mb4"}`}>Individual Standings</h2>
   		<div class={`${(isBrowser) ? "flex" : "dib"} w-100`}>
   		  <div class="grow mh2 dib" style={{width:(isBrowser)?"150px":"100px"}}>

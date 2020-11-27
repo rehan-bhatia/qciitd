@@ -37,7 +37,7 @@ let random_data = [
 ]
 
 const LeagueStandings = ({data}) => (
-	<div class={`ma3 mr2 ${(isBrowser) ? "br bw1 pr3 b--navy" : "bb bw1 pb3 b--navy"}`} style={{width:"600px"}}>
+	<div class={`ma3 mr2`} style={{width:"600px"}}>
 		
 		<h2 class={`mt4 mb2 pa2 ${(isBrowser) ? "tc" : "tl ml5 mb4"}`}>League Standings</h2>
   		<div class={`${(isBrowser) ? "flex" : "dib"} w-100`}>

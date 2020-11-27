@@ -45,7 +45,7 @@ const LeaguePage = ({data}) => (
 			<h1 class = {`pa2 ml3 avenir navy ${(isBrowser) ? "f-subheadline" : "f1"}`}>Leaderboard</h1>
 		</div>
 		<BrowserView>
-			<div class = "w-100 flex">
+			<div class = "w-100 flex" style={{alignItems: "flex-start"}}>
 	  			<LeagueStandings data={data.allGoogleSpreadsheetTeam.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1)} />
 	  			<IndivStandings data={data.allGoogleSpreadsheetIndividual.edges.sort((a, b) => (a.node.position > b.node.position) ? 1 : -1).filter(item => item.node.position<=6)}/>
 	  		</div>
