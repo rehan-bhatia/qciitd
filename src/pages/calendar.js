@@ -3,6 +3,7 @@ import "tachyons"
 import {isBrowser, BrowserView, MobileView} from "react-device-detect"
 
 import Nav from "../components/Nav.js";
+import CalendarCard from "../components/calendar_card.js";
 import "../components/style.css"
 
 let output;
@@ -55,12 +56,12 @@ class Calendar extends React.Component {
 			)
 			poster_group = (
 				<div class="slider w-90 pt3">
-					<img src={data[0]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[0]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[0]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[0]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[0]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[0]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
+					<CalendarCard poster = {data[0]} name = "Quiz Name" org = "IITD QC" date = "31st Dec" time = "8 pm" fees = "Free" platform = "Discord"/>
+					<CalendarCard poster = {data[0]} name = "Quiz Name" org = "IITD QC" date = "31st Dec" time = "8 pm" fees = "Free" platform = "Discord"/>
+					<CalendarCard poster = {data[0]} name = "Quiz Name" org = "IITD QC" date = "31st Dec" time = "8 pm" fees = "Free" platform = "Discord"/>
+					<CalendarCard poster = {data[0]} name = "Quiz Name" org = "IITD QC" date = "31st Dec" time = "8 pm" fees = "Free" platform = "Discord"/>
+					<CalendarCard poster = {data[0]} name = "Quiz Name" org = "IITD QC" date = "31st Dec" time = "8 pm" fees = "Free" platform = "Discord"/>
+					<CalendarCard poster = {data[0]} name = "Quiz Name" org = "IITD QC" date = "31st Dec" time = "8 pm" fees = "Free" platform = "Discord"/>
 				</div>
 			)
 				
@@ -90,12 +91,12 @@ class Calendar extends React.Component {
 			)
 			poster_group = (
 				<div class="slider w-90 pt3">
-					<img src={data[1]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[1]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[1]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[1]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[1]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[1]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
+					<CalendarCard poster = {data[1]} name = "Quiz Name" org = "Not IITD QC" date = "3rd Jan" time = "8 pm" fees = "17 crores" platform = "Google Meet"/>
+					<CalendarCard poster = {data[1]} name = "Quiz Name" org = "Not IITD QC" date = "3rd Jan" time = "8 pm" fees = "17 crores" platform = "Google Meet"/>
+					<CalendarCard poster = {data[1]} name = "Quiz Name" org = "Not IITD QC" date = "3rd Jan" time = "8 pm" fees = "17 crores" platform = "Google Meet"/>
+					<CalendarCard poster = {data[1]} name = "Quiz Name" org = "Not IITD QC" date = "3rd Jan" time = "8 pm" fees = "17 crores" platform = "Google Meet"/>
+					<CalendarCard poster = {data[1]} name = "Quiz Name" org = "Not IITD QC" date = "3rd Jan" time = "8 pm" fees = "17 crores" platform = "Google Meet"/>
+					<CalendarCard poster = {data[1]} name = "Quiz Name" org = "Not IITD QC" date = "3rd Jan" time = "8 pm" fees = "17 crores" platform = "Google Meet"/>
 				</div>
 			)
 
@@ -126,12 +127,12 @@ class Calendar extends React.Component {
 
 			poster_group = (
 				<div class="slider w-90 pt3">
-					<img src={data[2]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[2]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[2]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[2]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[2]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
-					<img src={data[2]} class="grow mh2" style={{height: "480px", width:"320px"}}/>
+					<CalendarCard poster = {data[2]} name = "Quiz Name" org = "IITD QC" date = "3rd Nov" time = "8 pm" fees = "12 aana" platform = "Google Meet"/>
+					<CalendarCard poster = {data[2]} name = "Quiz Name" org = "IITD QC" date = "3rd Nov" time = "8 pm" fees = "12 aana" platform = "Google Meet"/>
+					<CalendarCard poster = {data[2]} name = "Quiz Name" org = "IITD QC" date = "3rd Nov" time = "8 pm" fees = "12 aana" platform = "Google Meet"/>
+					<CalendarCard poster = {data[2]} name = "Quiz Name" org = "IITD QC" date = "3rd Nov" time = "8 pm" fees = "12 aana" platform = "Google Meet"/>
+					<CalendarCard poster = {data[2]} name = "Quiz Name" org = "IITD QC" date = "3rd Nov" time = "8 pm" fees = "12 aana" platform = "Google Meet"/>
+					<CalendarCard poster = {data[2]} name = "Quiz Name" org = "IITD QC" date = "3rd Nov" time = "8 pm" fees = "12 aana" platform = "Google Meet"/>
 				</div>
 			)
 		}
