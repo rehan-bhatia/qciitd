@@ -10,6 +10,7 @@ import FlipPoster from '../components/flipposter'
 import ProfileCard from '../components/profilecard'
 
 import './team.css'
+import TeamSection from "../components/team/team_section"
 
 const Team = () => (
     <div>
@@ -34,26 +35,7 @@ const Team = () => (
             </h1>
           </div>
       </div>
-      <div className="bg-cream fl w-100">
-        <h1 class="f2 lh-copy tc">Meet the Team</h1>
-        <div className="fl w-100 ma3 tc">  
-            {/* <ProfileCard /><br/> 
-            
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard /> 
-            <ProfileCard />  */}
-        </div>
-      </div>
+      <TeamSection />
     </div>
     <Footer/>
   </div>

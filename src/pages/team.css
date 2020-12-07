@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .team-collage{
     display: block;
     position: relative;
